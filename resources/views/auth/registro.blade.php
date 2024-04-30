@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Santamaria</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -32,29 +32,35 @@
     
             <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
     
-              <form action="{{route('login')}}" method="post">
+              <form action="{{ route('auth.store') }}" method="post">
                 @csrf
-
-                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar sesion</h3>
-    
+                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Registrarse</h3>
+            
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="text" id="form2Example18" class="form-control form-control-lg" />
-                  <label class="form-label" for="form2Example18">Usuario</label>
+                    <input type="text" id="name" name="name" class="form-control form-control-lg" />
+                    <label class="form-label" for="name">Usuario</label>
                 </div>
-    
+            
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="form2Example28" class="form-control form-control-lg" />
-                  <label class="form-label" for="form2Example28">Contraseña</label>
+                    <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                    <label class="form-label" for="email">Correo</label>
                 </div>
-    
+            
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                    <label class="form-label" for="password">Contraseña</label>
+                </div>
+            
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="password" id="confirm-password" name="password_confirmation" class="form-control form-control-lg" />
+                    <label class="form-label" for="confirm-password">Confirmar contraseña</label>
+                </div>
+            
                 <div class="pt-1 mb-4">
-                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="submit">Inuciar</button>
+                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="submit">Registrarse</button>
                 </div>
-    
-                <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Olvidaste tu contraseña?</a></p>
-                <p>No tienes cuenta? <a href="{{ route('auth.register')}}" class="link-info">Crear cuenta</a></p>
-    
-              </form>
+            </form>
+            
     
             </div>
     

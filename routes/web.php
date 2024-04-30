@@ -24,7 +24,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('auth.authenticate');
 
 // Register
-Route::get('/register', [AuthController::class, 'register'])->name('auth.register');
+Route::get('/register', [AuthController::class, 'register'])->name('auth.registro');
 Route::post('/register', [AuthController::class, 'store'])->name('auth.store');
 
 // Logout
